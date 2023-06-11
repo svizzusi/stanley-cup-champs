@@ -1,6 +1,6 @@
-const express = require('express');
-const app = express();
-const cors = require('cors');
+const express = require('express')
+const app = express()
+const cors = require('cors')
 const PORT = 3000
 
 app.use(cors());
@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/:name', (req, res) => {
-    const teamName = req.params.name.toLowerCase();
+    const teamName = req.params.name.toLowerCase()
     if(teams[teamName]) {
         res.json(teams[teamName].year);
     }else {
