@@ -1,6 +1,9 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const PORT = 3000
+
+app.use(cors());
 
 const teams = {
     'aneheim ducks': {
@@ -34,6 +37,6 @@ app.get('/api/:name', (req, res) => {
     }
 })
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
     console.log(`Express server listening on port ${PORT}`)
 });

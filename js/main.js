@@ -1,13 +1,13 @@
 document.querySelector('button').addEventListener('click', apiRequest)
 
 async function apiRequest(){
-    const rapperName = document.querySelector('input').value
+    const teamName = document.querySelector('input').value
     try{
-        const response = await fetch(`https://simple-rapper-api.herokuapp.com/api/${rapperName}`)
+        const response = await fetch(`https://simple-rapper-api.herokuapp.com/api/${teamName}`)
         const data = await response.json()
 
         console.log(data)
-        document.querySelector('h2').innerText = data.birthName
+        document.querySelector('h2').innerText = data.year
     }catch(error){
         console.log(error)
     }
