@@ -7,7 +7,7 @@ async function apiRequest(){
         const data = await response.json()
 
         console.log(data)
-        document.querySelector('.h2').innerText = data.year
+        document.querySelector('.h2').innerText = "Year: " + data
     }catch(error){
         console.log(error)
     }
