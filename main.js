@@ -1,4 +1,4 @@
-document.querySelector('button').addEventListener('click', apiRequest)
+document.querySelector('.button').addEventListener('click', apiRequest)
 
 async function apiRequest(){
     const teamName = document.querySelector('input').value
@@ -7,7 +7,7 @@ async function apiRequest(){
         const data = await response.json()
 
         console.log(data)
-        document.querySelector('h2').innerText = data.year
+        document.querySelector('.h2').innerText = data.year
     }catch(error){
         console.log(error)
     }
