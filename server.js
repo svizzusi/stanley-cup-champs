@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/index.html')
 })
 
-app.get('/:name', (req, res) => {
+app.get('/api/:name', (req, res) => {
     const teamName = req.params.name.toLowerCase()
     if(teams[teamName]) {
         res.json(teams[teamName].year);
