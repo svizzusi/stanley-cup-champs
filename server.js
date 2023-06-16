@@ -4,6 +4,7 @@ const cors = require('cors')
 const PORT = 3000
 
 app.use(cors());
+app.use(express.static('./public'));
 
 const teams = {
     'aneheim ducks': {
@@ -25,7 +26,7 @@ const teams = {
 }
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html')
+    res.sendFile(__dirname + '/public/index.html')
 })
 
 app.get('/:name', (req, res) => {
