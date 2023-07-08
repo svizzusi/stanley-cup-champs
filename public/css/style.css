@@ -35,9 +35,57 @@
   body {
     width: 100%;
     font-size: 62.5%;
+    color: var(--ghostwhite);
   }
 
   
   /******************************************
   /* LAYOUT
   /*******************************************/
+
+ main {
+    background-image: url(../images/stanley-cup.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  h1 {
+    font-size: var(--heading);
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    font-size: var(--paragraph);
+    color: var(--ghostwhite);
+  }
+
+  input {
+    background: var(--ghostwhite);
+    color: var(--black);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+
+  button {
+    background: var(--ghostwhite);
+    color: var(--black);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: .3s ease-in-out;
+  }
+  button:hover{
+    background: var(--black);
+    color: var(--ghostwhite);
+  }
